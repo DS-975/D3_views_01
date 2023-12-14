@@ -1,0 +1,27 @@
+git status
+
+# создать коммит
+git commit ""git commit -m ""
+
+# создать ветку
+git branch название_веткиgit branch -d название_ветки
+
+# перейти на ветку
+git checkout название_ветки
+
+# удалить веткуgit branch -d название_ветки
+# изменить название ветки
+git branch -m старое_имя_ветки новое_имя_ветки.
+
+# Чтобы в ветку develop влить master# Для этого нам надо сначала переключиться на ту ветку,
+# в которую мы хотим вливать (develop), а затем уже «мержить».
+git checkout develop
+git merge master
+
+# git remote add origin https://github.com/DS-975/D3-Django_Git_master-develop.git
+
+git push origin название_ветки
+
+git push -f origin название_ветки
+
+git pull origin название_ветки
