@@ -35,11 +35,11 @@
 # django-admin startproject project
 # endregion
 
-# region # todo: Создал приложение news
+# region # todo: Создал приложение simpleapp
 # todo: Переходим в папку project
 # cd .\project
-# todo: Создал приложение news
-# python manage.py startapp news
+# todo: Создал приложение simpleapp
+# python manage.py startapp simpleapp
 # endregion
 
 # region todo: Установка и настройка приложение Flatpages | Документация - > https://docs.djangoproject.com/en/3.1/ref/contrib/flatpages/
@@ -62,7 +62,7 @@
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
-# ↓ + ↓ B project/news/models.py
+# ↓ + ↓ B project/simpleapp/models.py
 # |  1 | from django.db import models
 # |  2 | from django.core.validators import MinValueValidator
 # |  3 |
@@ -101,7 +101,7 @@
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
-# ↓ + ↓ B project/news/admin.py
+# ↓ + ↓ B project/simpleapp/admin.py
 # | 1 | from django.contrib import admin
 # | 2 | from .models import Category, Product
 # | 3 |
@@ -110,7 +110,7 @@
 # | 6 | admin.site.register(Product)
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
-# ↓ + ↓ B project/news/views.py
+# ↓ + ↓ B project/simpleapp/views.py
 # | 1 | # Импортируем класс, который говорит нам о том,
 # | 2 | # что в этом представлении мы будем выводить список объектов из БД
 # | 3 | from django.views.generic import ListView
@@ -135,11 +135,11 @@
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
-# B project/news -> New -> File -> urls.py
+# B project/simpleapp -> New -> File -> urls.py
 #
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 #
-# ↓ + ↓ B project/news/urls.py
+# ↓ + ↓ B project/simpleapp/urls.py
 # | 1 | from django.urls import path
 # | 2 | # Импортируем созданное нами представление
 # | 3 | from .views import ProductsList
@@ -163,9 +163,9 @@
 # | 5 | path('admin/', admin.site.urls),
 # | 6 | path('pages/', include('django.contrib.flatpages.urls')),
 # | 7 |
-# | 8 | # Делаем так, чтобы все адреса из нашего приложения (news/urls.py)
+# | 8 | # Делаем так, чтобы все адреса из нашего приложения (simpleapp/urls.py)
 # | 9 | # подключались к главному приложению с префиксом products/.
-# | 10 | path('products/', include('news.urls')),
+# | 10 | path('products/', include('simpleapp.urls')),
 # | 11 ] ]
 #
 #
