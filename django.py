@@ -43,19 +43,18 @@
 # endregion
 
 # region todo: Установка и настройка приложение Flatpages | Документация - > https://docs.djangoproject.com/en/3.1/ref/contrib/flatpages/
-# todo: [ 1 ] В project/project/settings.py -> INSTALLED_APPS | 29 | 'django.contrib.sites', # <- Для работы приложения Flatpages
-#                                                             | 30 | 'django.contrib.flatpages', # <- Для работы приложения Flatpages
+# todo: [ 1 ] В project/project/settings.py -> INSTALLED_APPS | 32 | 'django.contrib.sites', # <- Для работы приложения Flatpages
+#                                                             | 33 | 'django.contrib.flatpages', # <- Для работы приложения Flatpages
 #
-# todo: [ 2 ] В project/project/settings.py -> MIDDLEWARE | 41 | 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', # <- Для работы приложения Flatpages
+# todo: [ 2 ] В project/project/settings.py -> MIDDLEWARE | 45 | 'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware', # <- Для работы приложения Flatpages
 #
-# todo: [ 3 ] В project/project/settings.py -> | 44 | SITE_ID = 1 # <- Для работы приложения Flatpages
+# todo: [ 3 ] В project/project/settings.py -> | 48 | SITE_ID = 1 # <- Для работы приложения Flatpages
 #
 # todo: [ 4 ] В project/project/settings.py -> |  2 | import os # <- импортируем os для работы приложения Flatpages
 #                                              | 51 | 'DIRS': [os.path.join(BASE_DIR, 'templates')], # <- Для работы приложения Flatpages
 #
 # todo: [ 5 ] В project/project/urls.py -> | include | 2 | from django.urls import path, include # include <- Для работы приложения Flatpages
-#
-# todo: [ 6 ] В project/project/urls.py -> | 6 | path('pages/', include('django.contrib.flatpages.urls')), # <- Для работы приложения Flatpages
+#                                                    | 6 | path('pages/', include('django.contrib.flatpages.urls')), # <- Для работы приложения Flatpages
 #
 # todo: [ 7 ] В project -> New -> File -> templates/flatpages/default.html
 # endregion
